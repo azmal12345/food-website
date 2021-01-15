@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Helvetica;
+}
+
+img {
+  cursor: pointer;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background: #23074d;
+  -webkit-box-shadow: 5px 8px 8px -6px black;
+          box-shadow: 5px 8px 8px -6px black;
+  z-index: 9999;
+}
+
+nav .logo {
+  padding: 0 1.50rem;
+}
+
+nav .logo img {
+  width: 85px;
+}
+
+nav ul {
+  margin-top: -55px;
+  float: right;
+  margin-right: 20px;
+  clear: both;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 1.50rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: orange;
+}
+
+nav .bars {
+  margin-top: -75px;
+  float: right;
+  clear: both;
+  font-size: 2.50rem;
+  color: white;
+  padding: 0 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.catagery {
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem;
+  background-image: linear-gradient(135deg, rgba(221, 13, 13, 0.1) 50%, rgba(0, 0, 0, 0.5) 50%), url("/foodImage/about4.jpg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+.catager_child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.catager_child .catager_text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+}
+
+.catager_child .catager_text h1 {
+  font-size: 4.50rem;
+  font-weight: bold;
+}
+
+.catager_child .catager_text button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border: 2px solid blue;
+  border-radius: 5px;
+  margin: 0 1rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: blue;
+  margin-bottom: 50px;
+}
+
+.catager_child .catager_text button:hover {
+  background-color: #23074d;
+  color: white;
+  border: 2px solid #23074d;
+}
+
+.catager_child .icon_auido i {
+  margin-top: 35px;
+  width: 70px;
+  height: 70px;
+  background-color: blue;
+  border-radius: 100%;
+  line-height: 70px;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.catager_child .icon_auido i:hover {
+  background-color: white;
+  color: blue;
+  -webkit-box-shadow: 0 0 5px #0400ff, 0 0 25px #0400ff, 0 0 50px #0400ff, 0 0 100px #0400ff, 0 0 200px rgba(4, 0, 255, 0.5), 0 0 300px rgba(4, 0, 255, 0.5);
+          box-shadow: 0 0 5px #0400ff, 0 0 25px #0400ff, 0 0 50px #0400ff, 0 0 100px #0400ff, 0 0 200px rgba(4, 0, 255, 0.5), 0 0 300px rgba(4, 0, 255, 0.5);
+}
+
+.food_text {
+  position: relative;
+  top: 100px;
+  margin: 0 2.50rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+}
+
+.food_text::before {
+  position: absolute;
+  top: 50px;
+  content: "";
+  border-bottom: 5px solid blue;
+  width: 70px;
+}
+
+.india_food {
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem;
+  position: relative;
+  top: 100px;
+}
+
+.indian_food_child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.indian_food_child .indian_food_text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+  margin: 10px;
+  text-align: center;
+  -webkit-box-shadow: 0 0 25px black;
+          box-shadow: 0 0 25px black;
+}
+
+.indian_food_child .indian_food_text img {
+  width: 100%;
+  max-width: 100%;
+  height: 150px;
+  overflow: hidden;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.indian_food_child .indian_food_text img:hover {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.indian_food_child .indian_food_text h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.indian_food_child .indian_food_text p {
+  font-size: 14px;
+}
+
+.indian_food_child .indian_food_text .btn {
+  font-size: 1rem;
+  background-color: #23074d;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.indian_food_child .indian_food_text b {
+  color: aqua;
+}
+
+/* ********************** footer container **************************** */
+.footer_container {
+  max-width: 100%;
+  background-color: #23074D;
+  color: #586061;
+  margin-top: 150px;
+}
+
+.footer_details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.footer_menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 350px;
+          flex: 1 1 350px;
+  padding: 1.50rem 1rem;
+}
+
+.footer_menu .about_details_us {
+  font-size: 16px;
+}
+
+.footer_menu h1 {
+  font-size: 1.70rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+
+.footer_menu .footer_icon {
+  max-width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer_menu .footer_icon i {
+  width: 35px;
+  height: 30px;
+  border: 2px solid #ffffff;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.footer_menu .footer_icon i:hover {
+  color: red;
+  -webkit-box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red, 0 0 200px rgba(255, 0, 0, 0.5), 0 0 300px rgba(255, 0, 0, 0.5);
+          box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red, 0 0 200px rgba(255, 0, 0, 0.5), 0 0 300px rgba(255, 0, 0, 0.5);
+}
+
+.footer_menu .location {
+  font-size: 1.30rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.footer_menu .phone_font {
+  font-size: 1.10rem;
+}
+
+.footer_menu a {
+  text-decoration: none;
+  color: #586061;
+  font-size: 14px;
+}
+
+.footer_menu a:hover {
+  color: #ffffff;
+}
+
+.footer_menu hr {
+  width: 100%;
+  background-color: #000000;
+  color: red;
+}
+
+.copyRight {
+  margin-top: -10px;
+  padding: 0 0 4rem 0;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+  word-spacing: 3px;
+  letter-spacing: 5px;
+}
+
+.copyRight a {
+  color: #339BD2;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.copyRight a:hover {
+  color: #ffffff;
+}
+
+.scroll_top {
+  position: fixed;
+  bottom: 32px;
+  right: 35px;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.scroll_top:hover {
+  text-decoration: none;
+  color: white;
+  -webkit-box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red, 0 0 200px rgba(255, 0, 0, 0.5), 0 0 300px rgba(255, 0, 0, 0.5);
+          box-shadow: 0 0 5px red, 0 0 25px red, 0 0 50px red, 0 0 100px red, 0 0 200px rgba(255, 0, 0, 0.5), 0 0 300px rgba(255, 0, 0, 0.5);
+}
+
+.scroll_top.activeScrollButton {
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 32px;
+}
+/*# sourceMappingURL=index3.css.map */

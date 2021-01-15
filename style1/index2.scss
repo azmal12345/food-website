@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+$red : red;
+$blue : blue;
+$green : green;
+$white : white;
+$black : black;
+$orange : orange;
+$lime : lime;
+$purple : purple;
+$skyblue : skyblue;
+
+// box shadow 
+@mixin boxShadow($shadow1,$shadow2,$shadow3,$shadow4,$color) {
+    box-shadow:  $shadow1 $shadow2 $shadow3 $shadow4 $color;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Helvetica;
+}
+
+img{
+    cursor: pointer;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background: #23074d;
+    @include boxShadow(5px, 8px, 8px, -6px, $black);
+    z-index: 9999;
+
+
+    .logo{
+        padding: 0 1.50rem;
+
+        img{
+            width: 85px;
+        }
+    }
+    // logo end 
+    ul{
+        margin-top: -55px;
+        float: right;
+        margin-right: 20px;
+        // z-index: 9999;
+        clear: both;
+
+        li{
+            display: inline-block;
+            margin: 0 1.50rem;
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                color: $white;
+                text-transform: uppercase;
+                font-size: 1rem;
+
+                &:hover{
+                    text-decoration: none;
+                    color: $orange;
+                }
+            }
+        }
+    }
+    // ul end 
+    .bars{
+        margin-top: -75px;
+        float: right;
+        clear: both;
+        font-size: 2.50rem;
+        color: $white;
+        padding: 0 2rem;
+        cursor: pointer;
+        display: none;
+    }
+
+}
+
+// ***************** top section ********************************
+.top{
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem;
+    background-image: linear-gradient(rgba(0,0,0,0.9) 30%, rgba(22, 4, 104, 0.6)), url("/foodImage/gallery.jpg.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: $white;
+    text-align: center;
+}
+
+.top_child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .top_text{
+        flex: 1 1 300px;
+
+        h1{
+            font-size: 2rem;
+            text-align: left;
+
+            span{
+                color: aqua;
+            }
+        }
+
+
+        img{
+            position: relative;
+            top: -50px;
+            width: 250px;
+            margin: 0 auto;
+            text-align: center;
+            height: 400px;
+        }
+
+        .year{
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            text-align: left;
+            padding: 2rem 0;
+
+            .dateShow{
+                width: 90px;
+                height: 80px;
+                background-color: rgba(16, 17, 17,0.5);
+                color: white;
+                margin: 1rem;
+
+                h1{
+                    font-size: 2rem;
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                h4{
+                    color: aqua;
+                    font-size: 17px;
+                    text-align: center;
+                    margin-top: 10px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+// ********************** section gallery *************************
+
+.section_gallery{
+    width: 100%;
+    max-width: 100%;
+    padding: 2.50rem;
+    font-family: inherit;
+}
+
+.gallery_child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery_text{
+    flex: 1 1 250px;
+    margin: 1rem;
+
+    h1{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    button{
+        width: 210px;
+        border-radius: 10px;
+        background: linear-gradient(to right, rgb(7,0,77));
+        color: $white;
+        padding: 10px;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+
+        i{
+            margin-left: 10px;
+        }
+    }
+
+    img{
+        width: 100%;
+        max-width: 100%;
+        @include boxShadow(5px, 8px, 8px, -6px, $black);
+    }
+
+    .arrow_button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .arrow_circle{
+            width: 25px;
+            height: 25px;
+            background-color: #23074d;
+            border-radius: 100%;
+            margin: 1rem 2rem;
+            cursor: pointer;
+
+            &:hover{
+                background-color: red;
+                box-shadow: 0 0 5px rgba(255,0,0,1),
+	            0 0 25px rgba(255,0,0,1),
+	            0 0 50px rgba(255,0,0,1),
+	            0 0 100px rgba(255,0,0,1),
+	            0 0 200px rgba(255,0,0,0.5),
+	            0 0 300px rgba(255,0,0,0.5);
+            }
+        }
+    }
+}
+
+// ************************ background image *****************************
+.background_img{
+    width: 100%;
+    max-width: 100%;
+    background-image: url("/foodImage/about4.jpg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+// ************************ my food *****************************
+
+.my_food{
+    margin-top: 70px;
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 1rem;
+}
+
+.my_food_child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .my_food_text{
+        flex: 1 1 300px;
+        margin: 7px;
+
+        img{
+            width: 100%;
+            max-width: 100%;
+            height: 250px;
+            transition: 0.5s all ease-in-out;
+
+            &:hover{
+                transform: scale(0.5);
+                transition: 0.5s all ease-in-out;
+            }
+        }
+    }
+}
+
+// ******************** about chif name ********************************
+
+.section_chif{
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem;
+}
+
+.chif_child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .chif_text{
+        flex: 1 1 200px;
+        height: 300px;
+        text-align: center;
+        margin: 7px;
+        @include boxShadow(5px, 8px, 8px, -6px, $black);
+        border-radius: 5px;
+
+        h4{
+            font-weight: 700;
+            margin: 14px 0;
+        }
+
+        p{
+            margin-top: -10px;
+        }
+
+        &:hover .topIconWithHover{
+            display: block;
+            transform: 0.5s ease;
+        }
+
+        img{
+            width: 100%;
+            max-width: 100%;
+            height: 200px;
+            min-height: 200px;
+            border-top-left-radius: 3.50px;
+            border-top-right-radius: 3.50px;
+        }
+    }
+}
+
+// mousehover icon 
+
+.topIconWithHover{
+    margin-top: -45px;
+    margin-bottom: 25px;
+    display: none;
+    transition: 0.5s ease;
+
+    i{
+        width: 35px;
+        height: 35px;
+        font-size: 1.30rem;
+        margin: 0 7.50px;
+        line-height: 35px;
+        color: $orange;
+        background-color: rgba(255, 255, 255, 0.898);
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $red;
+            color: $white;
+                box-shadow: 0 0 5px rgba(255,0,0,1),
+	            0 0 25px rgba(255,0,0,1),
+	            0 0 50px rgba(255,0,0,1),
+	            0 0 100px rgba(255,0,0,1),
+	            0 0 200px rgba(255,0,0,0.5),
+	            0 0 300px rgba(255,0,0,0.5);
+        }
+    }
+}
+
+// footer 
+
+/* ********************** footer container **************************** */
+
+.footer_container{
+    max-width: 100%;
+    background-color: #23074D;
+    color: #586061;
+    margin-top: 150px;
+}
+
+.footer_details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.footer_menu{
+    flex: 1 1 350px;
+    padding: 1.50rem 1rem;
+}
+
+.footer_menu .about_details_us{
+    font-size: 16px;
+}
+
+.footer_menu h1{
+    font-size: 1.70rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.footer_menu .footer_icon{
+    max-width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_menu .footer_icon i{
+    width: 35px;
+    height: 30px;
+    border: 2px solid #ffffff;
+    line-height: 30px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.footer_menu .footer_icon i:hover{
+    color: red;
+    box-shadow: 0 0 5px rgba(255,0,0,1),
+	            0 0 25px rgba(255,0,0,1),
+	            0 0 50px rgba(255,0,0,1),
+	            0 0 100px rgba(255,0,0,1),
+	            0 0 200px rgba(255,0,0,0.5),
+	            0 0 300px rgba(255,0,0,0.5);
+}
+
+.footer_menu .location{
+    font-size: 1.30rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer_menu .phone_font{
+    font-size: 1.10rem;
+}
+
+.footer_menu a{
+    text-decoration: none;
+    color: #586061;
+    font-size: 14px;
+}
+
+.footer_menu a:hover{
+    color: #ffffff;
+}
+
+.footer_menu hr{
+    width: 100%;
+    background-color: #000000;
+    color: red;
+}
+
+.copyRight{
+    margin-top: -10px;
+    padding: 0 0 4rem 0;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    word-spacing: 3px;
+    letter-spacing: 5px;
+}
+
+.copyRight a{
+    color: #339BD2;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.copyRight a:hover{
+    color: #ffffff;
+}
+
+// scroll button 
+.scroll_top{
+    position: fixed;
+    bottom: 32px;
+    right: 35px;
+    background-color:  $red;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .4s;
+
+    &:hover{
+        text-decoration: none;
+        color: $white;
+        box-shadow: 0 0 5px rgba(255,0,0,1),
+	            0 0 25px rgba(255,0,0,1),
+	            0 0 50px rgba(255,0,0,1),
+	            0 0 100px rgba(255,0,0,1),
+	            0 0 200px rgba(255,0,0,0.5),
+	            0 0 300px rgba(255,0,0,0.5);
+    }
+}
+
+.scroll_top.activeScrollButton{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 32px;
+}

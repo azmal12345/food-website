@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+$red : red;
+$blue : blue;
+$green : green;
+$white : white;
+$black : black;
+$orange : orange;
+$lime : lime;
+$purple : purple;
+$skyblue : skyblue;
+
+// box shadow 
+@mixin boxShadow($shadow1,$shadow2,$shadow3,$shadow4,$color) {
+    box-shadow:  $shadow1 $shadow2 $shadow3 $shadow4 $color;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Helvetica;
+}
+
+img{
+    cursor: pointer;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background: #23074d;
+    @include boxShadow(5px, 8px, 8px, -6px, $black);
+    z-index: 9999;
+
+
+    .logo{
+        padding: 0 1.50rem;
+
+        img{
+            width: 85px;
+        }
+    }
+    // logo end 
+    ul{
+        margin-top: -55px;
+        float: right;
+        margin-right: 20px;
+        // z-index: 9999;
+        clear: both;
+
+        li{
+            display: inline-block;
+            margin: 0 1.50rem;
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                color: $white;
+                text-transform: uppercase;
+                font-size: 1rem;
+
+                &:hover{
+                    text-decoration: none;
+                    color: $orange;
+                }
+            }
+        }
+    }
+    // ul end 
+    .bars{
+        margin-top: -75px;
+        float: right;
+        clear: both;
+        font-size: 2.50rem;
+        color: $white;
+        padding: 0 2rem;
+        cursor: pointer;
+        display: none;
+    }
+
+}
+
+// ******************************* content **************************
+
+.section_content{
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 2rem;
+    background-color: #23074D;
+    color: $white;
+}
+
+.content_child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+    .content_text{
+        flex: 1 1 200px;
+
+        h1{
+            font-size: 3rem;
+            text-align: left;
+        }
+
+        p{
+            text-align: left;
+        }
+
+        .content_icon{
+            text-align: left;
+
+            i{
+                margin: 10px;
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                line-height: 50px;
+                text-align: center;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: $white;
+                    color: $red;
+                    box-shadow: 0 0 25px rgba(245, 8, 8,1),
+                    0 0 50px rgba(245, 8, 8,1),
+                    0 0 100px rgba(245, 8, 8,1),
+                    0 0 200px rgba(245, 8, 8,0.5),
+                    0 0 300px rgba(245, 8, 8,0.5);
+                }
+            }
+        }
+    }
+}
+
+.content_box{
+    background-color: $white;
+    color: $black;
+    border-radius: 10px;
+    @include boxShadow(5px, 8px, 8px, -6px, $black);
+}
+
+.icon_containet{
+    background-color: $blue;
+    color: $white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    i{
+        font-size: 1.50rem;
+        font-weight: bold;
+    }
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input{
+        width: 80%;
+        margin: 1rem;
+        padding: 5px;
+    }
+}
+
+input[type="submit"]{
+    background-color: $blue;
+    color: $white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $red;
+    }
+}
+
+// ********************************* map **********************************
+
+.section_map{
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem;
+}
+
+.map_child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.map_text{
+    flex: 1 1 200px;
+
+    img{
+        width: 100%;
+        max-width: 100%;
+        min-height: 350px;
+    }
+
+    iframe{
+        width: 100%;
+        max-width: 100%;
+        min-height: 350px;
+        @include boxShadow(5px, 8px, 8px, -6px, $black);
+        border: 0.50px solid $black;
+    }
+}
+
+// footer 
+
+/* ********************** footer container **************************** */
+
+.footer_container{
+    max-width: 100%;
+    background-color: #23074D;
+    color: #586061;
+    margin-top: 150px;
+}
+
+.footer_details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.footer_menu{
+    flex: 1 1 350px;
+    padding: 1.50rem 1rem;
+}
+
+.footer_menu .about_details_us{
+    font-size: 16px;
+}
+
+.footer_menu h1{
+    font-size: 1.70rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.footer_menu .footer_icon{
+    max-width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_menu .footer_icon i{
+    width: 35px;
+    height: 30px;
+    border: 2px solid #ffffff;
+    line-height: 30px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.footer_menu .footer_icon i:hover{
+    color: red;
+    box-shadow: 0 0 5px rgba(255,0,0,1),
+	            0 0 25px rgba(255,0,0,1),
+	            0 0 50px rgba(255,0,0,1),
+	            0 0 100px rgba(255,0,0,1),
+	            0 0 200px rgba(255,0,0,0.5),
+	            0 0 300px rgba(255,0,0,0.5);
+}
+
+.footer_menu .location{
+    font-size: 1.30rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer_menu .phone_font{
+    font-size: 1.10rem;
+}
+
+.footer_menu a{
+    text-decoration: none;
+    color: #586061;
+    font-size: 14px;
+}
+
+.footer_menu a:hover{
+    color: #ffffff;
+}
+
+.footer_menu hr{
+    width: 100%;
+    background-color: #000000;
+    color: red;
+}
+
+.copyRight{
+    margin-top: -10px;
+    padding: 0 0 4rem 0;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    word-spacing: 3px;
+    letter-spacing: 5px;
+}
+
+.copyRight a{
+    color: #339BD2;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.copyRight a:hover{
+    color: #ffffff;
+}
+
+// scroll button 
+.scroll_top{
+    position: fixed;
+    bottom: 32px;
+    right: 35px;
+    background-color:  $red;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .4s;
+
+    &:hover{
+        text-decoration: none;
+        color: $white;
+        box-shadow: 0 0 5px rgba(255,0,0,1),
+	            0 0 25px rgba(255,0,0,1),
+	            0 0 50px rgba(255,0,0,1),
+	            0 0 100px rgba(255,0,0,1),
+	            0 0 200px rgba(255,0,0,0.5),
+	            0 0 300px rgba(255,0,0,0.5);
+    }
+}
+
+.scroll_top.activeScrollButton{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 32px;
+}
